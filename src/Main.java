@@ -19,7 +19,7 @@ public class Main {
 
         } catch (SQLException dbE) {
             System.out.println("SQL Error: "+ dbE.getMessage());
-            dbE.printStackTrace();
+            // dbE.printStackTrace();
         }
 
         System.out.println("DATABASE UPDATED\n");
@@ -53,7 +53,7 @@ public class Main {
 
         } catch (SQLException insE) {
             System.out.println("SQL error: " + insE.getMessage());
-            insE.printStackTrace();
+            // insE.printStackTrace();
         }
 
         while (isRunning) {
@@ -81,7 +81,7 @@ public class Main {
             }
             catch (InputMismatchException e) {
                 System.out.printf("Invalid input. Your input gave %s.", e.getMessage());
-                e.printStackTrace();
+                // e.printStackTrace();
                 scanner.next();
             }
         }
@@ -92,7 +92,7 @@ public class Main {
             updateBal.executeUpdate();
         } catch (SQLException updtE) {
             System.out.println("Balance Update Error: " + updtE.getMessage());
-            updtE.printStackTrace();
+            // updtE.printStackTrace();
         }
 
     }
@@ -144,10 +144,6 @@ public class Main {
             return str;
         }
         return str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
-    }
-
-    static void getUserData(String currentUser) {
-        return;
     }
 
 }
